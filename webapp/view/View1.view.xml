@@ -1,0 +1,29 @@
+<mvc:View controllerName="ediupload.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns:u="sap.ui.unified"
+    xmlns="sap.m">
+    <Page id="page" title="{i18n>title}">
+        <content >
+        <Toolbar >
+        <ToolbarSpacer />
+                <u:FileUploader id="FileUploaderId" sameFilenameAllowed="true" iconOnly="false" buttonOnly="true" fileType="txt"
+                        icon="sap-icon://upload" iconFirst="true" style="Emphasized" change="onUpload"/>
+                
+        </Toolbar>
+        	<List id='EdiList_id'
+		headerText="Records"
+		items="{EdiModel>/results}" >
+		<!-- <StandardListItem
+			title="{EdiModel>EDI_Number}"
+			description="{EdiModel>ODN_Number}"
+			/> -->
+            	<ObjectListItem
+				title="{EdiModel>EDI_Number}"    >
+                <ObjectAttribute text="{EdiModel>ODN_Number}" />
+			 
+		</ObjectListItem>
+		
+	</List>
+        </content>
+    </Page>
+</mvc:View>
