@@ -4,7 +4,7 @@ sap.ui.define([
 ], 
 function (JSONModel, Device) {
     "use strict";
-
+//comment
     return {
         /**
          * Provides runtime info for the device the UI5 app is running on as JSONModel
